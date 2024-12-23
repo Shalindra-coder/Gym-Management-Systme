@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{name1}",
+ "creation": "2024-12-21 15:54:38.089003",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_class_booking_details_section",
+  "class_type",
+  "class_date",
+  "name1",
+  "column_break_frjm",
+  "class_time",
+  "trainer",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_class_booking_details_section",
+   "fieldtype": "Section Break",
+   "label": "Gym Class Booking Details"
+  },
+  {
+   "fieldname": "class_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Class Type",
+   "options": "Dance\nFitness\nBoxing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_date",
+   "fieldtype": "Date",
+   "label": "Class Date"
+  },
+  {
+   "fieldname": "column_break_frjm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trainer",
+   "options": "Trainer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Booked\nCancelled"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "label": "name",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_time",
+   "fieldtype": "Data",
+   "label": "Class Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-22 21:46:38.388264",
+ "modified_by": "Administrator",
+ "module": "Gym_management",
+ "name": "Gym Class Booking",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

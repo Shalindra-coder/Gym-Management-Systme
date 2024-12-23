@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{member}",
+ "creation": "2024-12-21 15:41:12.127986",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_membership_details_section",
+  "member",
+  "membership_how_many_months",
+  "price",
+  "column_break_lumz",
+  "start_date",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_membership_details_section",
+   "fieldtype": "Section Break",
+   "label": "Gym Membership Details"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Gym Member"
+  },
+  {
+   "fetch_from": "member.start_date",
+   "fieldname": "start_date",
+   "fieldtype": "Data",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_lumz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "member.how_many_month_take_subscription",
+   "fieldname": "membership_how_many_months",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Membership How Many Months",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-22 21:45:04.233268",
+ "modified_by": "Administrator",
+ "module": "Gym_management",
+ "name": "Gym Membership",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

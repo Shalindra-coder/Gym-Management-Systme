@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{member}",
+ "creation": "2024-12-22 08:49:42.899006",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fitness_matics_details_section",
+  "member",
+  "weight",
+  "date",
+  "calories"
+ ],
+ "fields": [
+  {
+   "fieldname": "fitness_matics_details_section",
+   "fieldtype": "Section Break",
+   "label": "Fitness Matics Details"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "calories",
+   "fieldtype": "Float",
+   "label": "Calories"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-22 15:30:42.888702",
+ "modified_by": "Administrator",
+ "module": "Gym_management",
+ "name": "Fitness Matrics",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

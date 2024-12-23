@@ -1,0 +1,115 @@
+<div class="gym-info-container">
+    <div class="gym-details">
+        <h1 class="gym-title">{{ (doc.title or doc.name) |e }}</h1>
+
+        <div class="detail-item">
+            <h2>Opening Hours</h2>
+            <p><strong>From:</strong> {{ doc.opening_time }} <strong>To:</strong> {{ doc.closing_time }}</p>
+        </div>
+
+        <div class="detail-item">
+            <h2>Capacity</h2>
+            <p><strong>Maximum Capacity:</strong> {{ doc.maximum_capacity }} members</p>
+        </div>
+
+        <div class="detail-item">
+            <h2>Contact Information</h2>
+            <p><strong>Phone:</strong> {{ doc.contact_number }}</p>
+            <p><strong>Email:</strong> {{ doc.email }}</p>
+        </div>
+
+        <div class="detail-item">
+            <h2>Location</h2>
+            <p>{{ doc.gym_location }}</p>
+        </div>
+
+        <!-- Link to the route -->
+        <div class="action-container">
+            <a href="/{{ doc.route |e }}">
+                <button type="button" class="btn btn-primary">Explore {{ (doc.title or doc.name) |e }}</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+		background-image: url('https://t4.ftcdn.net/jpg/07/70/99/11/360_F_770991157_sJjqgJDjp0k56qVDXCTZOslppdloQX9h.jpg');
+		background-size: cover;
+    }
+
+    .gym-info-container {
+        max-width: 800px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+		background-image: url('https://as1.ftcdn.net/v2/jpg/02/52/32/00/1000_F_252320011_nFxqN79uW7DogyaoidTFCfpZuvr9pOtS.jpg');
+		background-size: cover;
+		
+    }
+
+    .gym-info-container:hover {
+        transform: scale(1.02);
+    }
+
+    .gym-title {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 20px 10px;
+        margin: 0;
+    }
+
+    .gym-details {
+        padding: 20px;
+		color: white;
+    }
+
+    .detail-item {
+        margin-bottom: 20px;
+    }
+
+    .detail-item h2 {
+        color: #333;
+        font-size: 18px;
+        margin-bottom: 5px;
+		color: white;
+    }
+
+    .detail-item p {
+        font-size: 16px;
+        color: #555;
+        margin: 0;
+		color: white;
+    }
+
+    .action-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>

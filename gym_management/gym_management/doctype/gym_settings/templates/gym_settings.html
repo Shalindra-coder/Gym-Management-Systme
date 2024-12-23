@@ -1,0 +1,65 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="gym-info-container">
+    <h1 class="gym-title">{{ title | e }}</h1>
+
+    <div class="gym-details">
+        <h2>Opening Hours</h2>
+        <p><strong>From:</strong> {{ doc.opening_time }} <strong>To:</strong> {{ doc.closing_time }}</p>
+
+        <h2>Capacity</h2>
+        <p><strong>Maximum Capacity:</strong> {{ doc.maximum_capacity }} members</p>
+
+        <h2>Contact Information</h2>
+        <p><strong>Phone:</strong> {{ doc.contact_number }}</p>
+        <p><strong>Email:</strong> {{ doc.email }}</p>
+
+        <h2>Location</h2>
+        <p>{{ doc.gym_location }}</p>
+    </div>
+
+    <a href="/empower-your-fitness-with-our-gym-management-system">
+        <button>Click Now</button>
+    </a>
+</div>
+
+<style>
+    body {
+        background-color: rgb(245, 239, 240);
+    }
+
+    .gym-info-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-image: url('https://t4.ftcdn.net/jpg/00/99/82/15/360_F_99821575_nVEHTBXzUnTcLIKN6yOymAWAnFwEybGb.jpg');
+        background-size: cover;
+    }
+
+    .gym-title {
+        text-align: center;
+        color: rgb(235, 195, 15);
+        margin-bottom: 20px;
+    }
+
+    .gym-details h2 {
+        color: white;
+        margin-top: 20px;
+    }
+
+    .gym-details p {
+        font-size: 16px;
+        color: white;
+        line-height: 1.6;
+    }
+
+    .gym-details p strong {
+        color: white;
+    }
+</style>
+{% endblock %}
