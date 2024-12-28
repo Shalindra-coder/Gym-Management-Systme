@@ -9,7 +9,7 @@
   {
    "fieldname": "class_type",
    "fieldtype": "Select",
-   "label": "Class Type",
+   "label": "class_type",
    "mandatory": 1,
    "options": "Fitness\nBoxing\nDance",
    "wildcard_filter": 0
@@ -22,16 +22,16 @@
    "wildcard_filter": 0
   }
  ],
- "idx": 0,
+ "idx": 1,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2024-12-22 21:32:56.921313",
+ "modified": "2024-12-24 10:40:30.067263",
  "modified_by": "Administrator",
  "module": "Gym_management",
  "name": "Show Gym Class Booking",
  "owner": "Administrator",
  "prepared_report": 0,
- "query": "SELECT \n    class_type,\n    class_date,\n    time,\n    trainer,\n    name,\n    status\nFROM \n    `tabGym Class Booking`\nWHERE \n    trainer = 'abc'  \n    AND class_type IN ('Boxing', 'Fitness', 'Dance');\n",
+ "query": "SELECT \n    g.class_type,\n    g.class_date,\n    g.time, \n    g.trainer, \n    g.name, \n    g.status\nFROM \n    `tabGym Class Booking` g\nWHERE \n    g.trainer = %(trainer)s\n    AND g.class_type = %(class_type)s;\n",
  "ref_doctype": "Gym Class Booking",
  "report_name": "Show Gym Class Booking",
  "report_type": "Query Report",

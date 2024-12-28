@@ -14,7 +14,8 @@
   "address",
   "email",
   "start_date",
-  "how_many_month_take_subscription"
+  "how_many_month_take_subscription",
+  "end_date"
  ],
  "fields": [
   {
@@ -66,11 +67,16 @@
    "fieldname": "name1",
    "fieldtype": "Data",
    "label": "Name"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Data",
+   "label": "End Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-22 21:44:17.730788",
+ "modified": "2024-12-26 15:29:54.037285",
  "modified_by": "Administrator",
  "module": "Gym_management",
  "name": "Gym Member",

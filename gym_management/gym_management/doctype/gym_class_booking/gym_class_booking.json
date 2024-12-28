@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{name1}",
+ "autoname": "format:{name1}-{class_type}",
  "creation": "2024-12-21 15:54:38.089003",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,11 +9,12 @@
   "gym_class_booking_details_section",
   "class_type",
   "class_date",
-  "name1",
+  "member",
   "column_break_frjm",
   "class_time",
   "trainer",
-  "status"
+  "status",
+  "email"
  ],
  "fields": [
   {
@@ -53,21 +54,27 @@
    "options": "Booked\nCancelled"
   },
   {
-   "fieldname": "name1",
-   "fieldtype": "Link",
-   "label": "name",
-   "options": "Gym Member",
-   "reqd": 1
-  },
-  {
    "fieldname": "class_time",
    "fieldtype": "Data",
    "label": "Class Time"
+  },
+  {
+   "fetch_from": "name1.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Gym Member",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-22 21:46:38.388264",
+ "modified": "2024-12-28 12:06:52.275750",
  "modified_by": "Administrator",
  "module": "Gym_management",
  "name": "Gym Class Booking",

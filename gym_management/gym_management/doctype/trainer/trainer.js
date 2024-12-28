@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 
 // frappe.ui.form.on("Trainer", {
-// 	refresh(frm) {
-
-// 	},
+//     refresh(frm) {
+//         frappe.msgprint("This is the Trainer Portal. Please fill in the Trainer Information.");
+//     }
 // });
